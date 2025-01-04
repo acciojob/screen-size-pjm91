@@ -7,10 +7,22 @@
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
+	 <div id="sizeInfo">
+        <h1>Width: 0 and Height: 0</h1>
+    </div>
     <script type="text/javascript" src="./script.js">
 </script>
 
 </body>
+<script>
+    function updateSize(){
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const sizeInfo = document.getElementById('sizeInfo').querySelector('h1');
+        sizeInfo.textContent = `Width: ${width} and Height: ${height}`;
+    }
+    updateSize();
 
+    window.addEventListener('resize', updateSize);
+</script>
 </html>
